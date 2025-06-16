@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nepaai Music</title>
-  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -68,9 +67,44 @@
       border-left: 5px solid #e52e71;
     }
 
-    audio {
+    audio, iframe {
       margin-top: 1rem;
       width: 100%;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    input[type="submit"] {
+      background-color: #e52e71;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #ff6a00;
     }
 
     footer {
@@ -100,12 +134,12 @@
     <h2>Upcoming Shows</h2>
     <div class="show-list">
       <div class="show-card">
-        <h3>Midnight Beats</h3>
-        <p>June 30, 2025 - Kathmandu</p>
+        <h3>FAcebook Live with Saru Murari Guragain</h3>
+        <p>June 30, 2025 - Online</p>
       </div>
       <div class="show-card">
-        <h3>Sunset Acoustic</h3>
-        <p>July 14, 2025 - Pokhara</p>
+        <h3>Live Singing</h3>
+        <p>July 13, 2025 - Texas</p>
       </div>
     </div>
   </section>
@@ -116,6 +150,27 @@
       <source src="audio/sample-track.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
+    <h3 style="margin-top: 2rem;">Watch Video</h3>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="images/show1.jpg" alt="Live show 1">
+      <img src="images/show2.jpg" alt="Live show 2">
+      <img src="images/show3.jpg" alt="Backstage">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message" />
+    </form>
   </section>
 
   <footer>
